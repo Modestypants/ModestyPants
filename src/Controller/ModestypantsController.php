@@ -33,9 +33,7 @@ class ModestypantsController extends AbstractController
      */
     public function asks()
     {
-
         return $this->render('modestypants/asks.html.twig');
-
 
     }
 

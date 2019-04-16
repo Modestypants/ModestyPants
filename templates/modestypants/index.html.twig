@@ -1,2 +1,23 @@
-<h1>bijour</h1>
+{% extends 'base.html.twig' %}
+
+{% block title %}Pas de contact{% endblock %}
+
+
+{% block body %}
+
+    <h1>Contactez-nous !</h1>
+
+
+    {{ form_start(contactForm) }}
+
+    {{ form_widget(contactForm) }}
+
+    <input type="submit" value="Envoyer" class="btn btn-primary">
+
+    {{ form_end(contactForm) }}
+
+{% endblock %}
+
+
+
 

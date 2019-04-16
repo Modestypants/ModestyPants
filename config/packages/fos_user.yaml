@@ -5,3 +5,6 @@ fos_user:
   from_email:
     address: "test@test.fr"
     sender_name: "test"
+  registration:
+    form:
+        type: App\Form\RegistrationFormType
