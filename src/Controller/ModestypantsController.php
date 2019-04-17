@@ -8,6 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ModestypantsController extends AbstractController
 {
+
+
     /**
      * @Route("/mode", name="mode")
      */
@@ -18,6 +20,8 @@ class ModestypantsController extends AbstractController
         ]);
     }
 
+
+
     /**
      * @Route("/home", name="home")
      * @return Response
@@ -26,6 +30,8 @@ class ModestypantsController extends AbstractController
     {
         return $this->render('modestypants/home.html.twig');
     }
+
+
 
     /**
      * @Route("/asks", name="asks")
@@ -37,6 +43,8 @@ class ModestypantsController extends AbstractController
 
     }
 
+
+
     /**
      * @Route("/looks", name="looks")
      * @return \Symfony\Component\HttpFoundation\Response
@@ -46,6 +54,8 @@ class ModestypantsController extends AbstractController
 
         return $this->render('modestypants/looks.html.twig');
     }
+
+
 
     /**
      * @Route("/portraits", name="portraits")
@@ -57,6 +67,8 @@ class ModestypantsController extends AbstractController
         return $this->render('modestypants/portraits.html.twig');
     }
 
+
+
     /**
      * @Route("/contact", name="contact")
      * @return \Symfony\Component\HttpFoundation\Response
@@ -66,6 +78,9 @@ class ModestypantsController extends AbstractController
 
         return $this->render('modestypants/contact.html.twig');
     }
+
+
+
 
     /**
      * @Route("/story", name="story")
@@ -77,8 +92,12 @@ class ModestypantsController extends AbstractController
         return $this->render('modestypants/story.html.twig');
     }
 
+
+
+
+
     /**
-     * @Route("/about", name="about")
+     * @Route("/", name="about")
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function about()

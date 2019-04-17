@@ -25,7 +25,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-        <a class="navbar-brand" href="#">About</a>
+        <a class="nav-link" href="{{ path('about') }}">About<span class="sr-only">(current)</span></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -41,38 +41,40 @@
 
                 <li class="nav-item active">
 
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+
+                    <a class="nav-link" href="{{ path('story') }}">Story<span class="sr-only">(current)</span></a>
+
 
                 </li>
                 <li class="nav-item active">
 
-                    <a class="nav-link" href="asks">Asks<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ path('asks') }}">Asks<span class="sr-only">(current)</span></a>
 
                 </li>
 
                 <li class="nav-item">
 
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{{ path('portraits') }}">Portraits de femmes inspirantes<span class="sr-only">(current)</span></a>
 
                 </li>
 
                 <li class="nav-item dropdown">
 
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{{ path('looks')}}" id="navbarIdées de Looks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                        Dropdown
+                        Idées de Looks
 
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="{{ path('looks')}}">Selon les occasions</a>
 
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="{{ path('looks')}}">Selon la morphologie</a>
 
                         <div class="dropdown-divider"></div>
 
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="{{ path('looks')}}">Selon les saisons</a>
 
                     </div>
 
@@ -80,7 +82,7 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link disabled" href="#">about</a>
+                    <a class="nav-link" href="{{ path('contact') }}">Contact<span class="sr-only">(current)</span></a>
 
                 </li>
 
