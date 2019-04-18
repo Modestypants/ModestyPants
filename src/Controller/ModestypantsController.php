@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Form\FormcontactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -73,10 +75,26 @@ class ModestypantsController extends AbstractController
      * @Route("/contact", name="contact")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function contact()
+    public function contact(Request $request)
     {
+        $form = $this->createForm(FormcontactType::class);
 
-        return $this->render('modestypants/contact.html.twig');
+        $form->handleRequest($request);
+
+
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            dump($form->getData());
+
+            die('Recuperation des donnees');
+
+        }
+
+        return $this->render('modestypants/contact.html.twig', [
+            'contactForm'=> $form->createView(),
+
+        ]);
     }
 
 

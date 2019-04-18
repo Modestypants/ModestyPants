@@ -5,9 +5,7 @@
 namespace App\Controller;
 
 
-
-use App\Form\ContactType;
-
+use App\Form\FormcontactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -23,7 +21,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class ContactController extends AbstractController
 
 {
-
     /**
 
      * @Route("/contact", name="contact")
@@ -34,31 +31,11 @@ class ContactController extends AbstractController
 
      */
 
-    public function index(Request $request)
+    public function index(Request $request):Response
 
     {
 
-        $form = $this->createForm(ContactType::class);
 
-        $form->handleRequest($request);
-
-
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            dump($form->getData());
-
-            die('Recuperation des donnees');
-
-        }
-
-
-
-        return $this->render('contact/index.html.twig', [
-
-            'contactForm' => $form->createView(),
-
-        ]);
 
     }
 
