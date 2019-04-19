@@ -113,7 +113,6 @@ class ModestypantsController extends AbstractController
 
 
 
-
     /**
      * @Route("/", name="about")
      * @return \Symfony\Component\HttpFoundation\Response
@@ -123,6 +122,18 @@ class ModestypantsController extends AbstractController
 
         return $this->render('modestypants\about.html.twig');
     }
+
+    /**
+     * @Route("/back", name="back")
+     *
+     */
+
+    public function  back()
+{
+
+    return $this->render('modestypants\back.html.twig');
+}
+
 
 
 
